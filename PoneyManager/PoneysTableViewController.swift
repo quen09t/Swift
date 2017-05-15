@@ -8,11 +8,25 @@
 
 import UIKit
 
-class PoneysTableViewController: UITableViewController {
 
+
+class PoneyCell: UITableViewCell{
+
+    @IBOutlet weak var name: UILabel!
+
+    @IBOutlet weak var lab: UILabel!
+
+}
+
+class PoneysTableViewController: UITableViewController {
+    var poneyContainer = PoneyContainer()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        poneyContainer.addPoney(Poney:Poney(name:"kek", level: 1)!)
+        poneyContainer.addPoney(Poney:Poney(name:"osf", level: 2)!)
+        poneyContainer.addPoney(Poney:Poney(name:"osf1", level: 3)!)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,20 +43,22 @@ class PoneysTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return poneyContainer.PoneyList.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "poneyCell", for: indexPath)
-
-         //Configure the cell...
-
+        let cell : PoneyCell = tableView.dequeueReusableCell(withIdentifier: "poneyCell", for: indexPath) as! PoneyCell
+       
+        //Configure the cell...
+        cell.name.text = poneyContainer.PoneyList[indexPath.row].name;
+        let kek = poneyContainer.PoneyList[indexPath.row].level;
+        cell.lab.text = "\(kek)"
         return cell
     }
 

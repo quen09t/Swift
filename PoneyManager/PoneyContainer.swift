@@ -17,14 +17,14 @@ class PoneyContainer {
     
     func printPoneys () -> Void {
         for Item in PoneyList {
-            print("Name : ",Item.name," Level : ", Item.Level)
+            print("Name : ",Item.name," Level : ", Item.level)
         }
     }
     
     func getList() -> String {
         var str = ""
         for Item in PoneyList {
-            str += "Name : \(Item.name) Level :  \(Item.Level) \n"
+            str += "Name : \(Item.name) Level :  \(Item.level) \n"
         }
         return str
     }

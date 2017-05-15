@@ -9,11 +9,18 @@
 import Foundation
 
 struct Poney {
-    var Level = 1
+    var level = 1
     var name = "dada"
     
     mutating func levelUp() -> Void {
-        self.Level += 1
+        self.level += 1
     }
+    
+    
+    init?(name:String, level: Int){
+        self.name = name
+        self.level = level
+    }
+    
     
 }

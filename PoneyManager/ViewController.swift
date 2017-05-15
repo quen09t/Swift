@@ -40,9 +40,9 @@ class ViewController: UIViewController {
         }
         
         
-        let poney = Poney(Level: LevelInt, name: Name)
+        let poney = Poney(name: Name, level: LevelInt)
         
-        container.addPoney(Poney: poney)
+        container.addPoney(Poney: poney!)
         
         PoneyList.text = "Poneys";
         PoneyList.text = container.getList()

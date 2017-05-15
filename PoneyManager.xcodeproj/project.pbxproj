@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EED348E51EC9814E0079E2AB /* Poney.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED348E41EC9814E0079E2AB /* Poney.swift */; };
-		EED348E71EC9826A0079E2AB /* enclos.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED348E61EC9826A0079E2AB /* enclos.swift */; };
 		EED348E91EC9D5770079E2AB /* PoneysTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED348E81EC9D5770079E2AB /* PoneysTableViewController.swift */; };
+		EED348EB1EC9E4A10079E2AB /* PoneyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED348EA1EC9E4A10079E2AB /* PoneyContainer.swift */; };
 		EEEBF35A1E8031470078EFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBF3591E8031470078EFF9 /* AppDelegate.swift */; };
 		EEEBF35C1E8031470078EFF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBF35B1E8031470078EFF9 /* ViewController.swift */; };
 		EEEBF35F1E8031470078EFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEEBF35D1E8031470078EFF9 /* Main.storyboard */; };
@@ -19,8 +19,8 @@
 
 /* Begin PBXFileReference section */
 		EED348E41EC9814E0079E2AB /* Poney.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poney.swift; sourceTree = "<group>"; };
-		EED348E61EC9826A0079E2AB /* enclos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enclos.swift; sourceTree = "<group>"; };
 		EED348E81EC9D5770079E2AB /* PoneysTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoneysTableViewController.swift; sourceTree = "<group>"; };
+		EED348EA1EC9E4A10079E2AB /* PoneyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoneyContainer.swift; sourceTree = "<group>"; };
 		EEEBF3561E8031470078EFF9 /* PoneyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoneyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEEBF3591E8031470078EFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEEBF35B1E8031470078EFF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 				EEEBF3621E8031470078EFF9 /* LaunchScreen.storyboard */,
 				EEEBF3651E8031470078EFF9 /* Info.plist */,
 				EED348E41EC9814E0079E2AB /* Poney.swift */,
-				EED348E61EC9826A0079E2AB /* enclos.swift */,
+				EED348EA1EC9E4A10079E2AB /* PoneyContainer.swift */,
 			);
 			path = PoneyManager;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 				EEEBF35C1E8031470078EFF9 /* ViewController.swift in Sources */,
 				EED348E51EC9814E0079E2AB /* Poney.swift in Sources */,
 				EEEBF35A1E8031470078EFF9 /* AppDelegate.swift in Sources */,
-				EED348E71EC9826A0079E2AB /* enclos.swift in Sources */,
+				EED348EB1EC9E4A10079E2AB /* PoneyContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
