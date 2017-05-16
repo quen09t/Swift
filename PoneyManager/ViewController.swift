@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let container = PoneyContainer()
+    var poneyContainer: PoneyContainer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     //Actions
     
     @IBAction func SavePoney(_ sender: UIButton) {
+        guard let PoneyContainer = poneyContainer else { fatalError("no PoneyList")}
         guard let LevelString = Prix.text else {
             print("No level set")
             return
@@ -42,11 +43,13 @@ class ViewController: UIViewController {
         
         let poney = Poney(name: Name, level: LevelInt)
         
-        container.addPoney(Poney: poney!)
+        PoneyContainer.addPoney(Poney: poney!)
         
         PoneyList.text = "Poneys";
-        PoneyList.text = container.getList()
-        container.printPoneys()
+        PoneyList.text = PoneyContainer.getList()
+        PoneyContainer.printPoneys()
+        
+        dismiss(animated: true, completion: nil)
         
         
     }
