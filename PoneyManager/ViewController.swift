@@ -44,9 +44,6 @@ class ViewController: UIViewController {
         let poney = Poney(name: Name, level: LevelInt)
         
         PoneyContainer.addPoney(Poney: poney!)
-        
-        PoneyList.text = "Poneys";
-        PoneyList.text = PoneyContainer.getList()
         PoneyContainer.printPoneys()
         
         dismiss(animated: true, completion: nil)
@@ -55,7 +52,7 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var Prix: UITextField!
     @IBOutlet weak var Name: UITextField!
-    @IBOutlet weak var PoneyList: UITextView!
+
     
 }
 

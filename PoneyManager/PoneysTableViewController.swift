@@ -22,7 +22,10 @@ class PoneysTableViewController: UITableViewController {
     var poneyContainer = PoneyContainer()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let notCenter = NotificationCenter.default
+        notCenter.addObserver(forName: Notification.Name("modelUpdated"), object: nil, queue: nil) { (note) in
+            self.tableView.reloadData()
+        }
         poneyContainer.addPoney(Poney:Poney(name:"kek", level: 1)!)
         poneyContainer.addPoney(Poney:Poney(name:"osf", level: 2)!)
         poneyContainer.addPoney(Poney:Poney(name:"osf1", level: 3)!)
@@ -61,7 +64,11 @@ class PoneysTableViewController: UITableViewController {
         cell.lab.text = "\(kek)"
         return cell
     }
-
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        tableView.reloadData()
+//    }
 
     /*
     // Override to support conditional editing of the table view.

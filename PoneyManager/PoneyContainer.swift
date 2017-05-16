@@ -13,7 +13,11 @@ class PoneyContainer {
     var PoneyList = [Poney]();
     func addPoney(Poney :Poney) -> Void {
         PoneyList.append(Poney)
+        let notCenter = NotificationCenter.default
+        notCenter.post(name: Notification.Name("modelUpdated"), object: self)
     }
+    
+    
     
     func printPoneys () -> Void {
         for Item in PoneyList {
